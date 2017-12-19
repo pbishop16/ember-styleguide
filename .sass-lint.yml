@@ -1,0 +1,25 @@
+file:
+  include: '**/*.scss'
+
+options:
+  formatter: stylish
+  merge-default-rules: true
+
+rules:
+  no-ids:
+    - 1
+
+  no-important:
+    - 1
+
+  property-sort-order:
+    - 1
+    - order: alphabetical
+
+  class-name-format:
+    - 1
+    - convention: hyphenatedlowercase
+
+  variable-name-format:
+    - 1
+    - convention: ((c-[a-z]+)(-((darker|darkest|lighter|lightest)$)))|(c-[a-z]+$)|(^[a-z]{2,})-([a-z]+)+
