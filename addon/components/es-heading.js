@@ -4,8 +4,15 @@ import layout from '../templates/components/es-heading';
 export default Component.extend({
   layout,
   classNames: ['es-heading'],
-  classNameBindings: ['isPageHeading:page-heading', 'isCentered:text-center'],
-  attributeBindings: ['ariaLabel:aria-label', 'title'],
+  classNameBindings: [
+    'isPageHeading:page-title:section-title',
+    'isCentered:text-center',
+    'isUppercase:text-uppercase',
+  ],
+  attributeBindings: [
+    'ariaLabel:aria-label',
+    'title',
+  ],
 
   tagName: 'h1', //acceptable values should be h1-h6
   headingText: null,
@@ -23,5 +30,6 @@ export default Component.extend({
 
   //other styling
   isPageHeading: false, //if true, add classname "page-heading"
-  isCentered: false //if true, add classname "text-center"
+  isCentered: false, //if true, add classname "text-center"
+  isUppercase: false,
 });
